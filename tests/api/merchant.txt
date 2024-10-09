@@ -1,0 +1,24 @@
+Creating Merchant
+
+URL: http://localhost:5000/api/merchant/create
+Method: POST
+Example Body: {
+    "name": "New Merchant",
+    "website": "https://merchantwebsite.com",
+    "email": "merchant@example.com",
+    "phone": "987-654-3210"
+}
+
+expected response: {
+    "message": "Merchant created successfully",
+    "merchant": {
+        "name": "New Merchant",
+        "website": "https://merchantwebsite.com",
+        "email": "merchant@example.com",
+        "phone": "987-654-3210",
+        "_id": "66da74eda136b42d0caa8f9a",
+        "createdAt": "2024-09-06T03:20:13.715Z",
+        "__v": 0
+    },
+    "apiKey": "c5c08e23d7e1c9755113ec4e9dc1cccc9f5498896745013c3cd2f97025f93106"
+}

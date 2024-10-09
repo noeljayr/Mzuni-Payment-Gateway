@@ -1,0 +1,3 @@
+Flask==2.1.1        # Or any web framework of your choice
+cryptography        # For encryption
+Werkzeug==2.2.xpip install --upgrade flask werkzeug

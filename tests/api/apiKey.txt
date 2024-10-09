@@ -1,0 +1,46 @@
+Generating Key
+
+URL: http://localhost:5000/api/api-key/generate
+Method: POST
+Header: Headers: {
+    "x-api-key": "c5c08e23d7e1c9755113ec4e9dc1cccc9f5498896745013c3cd2f97025f93106"
+}
+
+expected response: {
+    "message": "New API key generated successfully",
+    "apiKey": "81a51bc486b898c51d48ebed8592ec32ceb1ec0e4ee95dd6d79f5cc0d989b887"
+}
+
+
+
+Retrieving All API Keys for a Merchant
+
+URL: http://localhost:5000/api/api-key/merchant/<merchantId>
+Method: GET
+
+expected response: [
+    {
+        "_id": "66da74eda136b42d0caa8f9c",
+        "key": "c5c08e23d7e1c9755113ec4e9dc1cccc9f5498896745013c3cd2f97025f93106",
+        "merchantId": "66da74eda136b42d0caa8f9a",
+        "status": "active",
+        "usageCount": 0,
+        "createdAt": "2024-09-06T03:20:13.893Z",
+        "__v": 0
+    }
+]
+
+
+
+Activating/Deactivating an API Key
+
+URL: http://localhost:5000/api/api-key/status/<apiKeyId>
+Method: PATCH
+Example Body: {
+    "status": "disabled" // or "active"
+}
+
+expected response: {
+    "message": "API key status updated successfully"
+}
+
