@@ -12,9 +12,9 @@ load_dotenv('.env')
 
 payments = {}
 
-key = bytes.fromhex("376476efaac138b98fef1db0d836bda241cf7f0ba63cc733b5155014e2df6651")
-iv = bytes.fromhex("816e0b8e3180b6c767b182296a1222c5")
-client = MongoClient('mongodb+srv://noeljayr01:thegamejr@mzunipay.oyy4a.mongodb.net/?retryWrites=true&w=majority&appName=mzunipay')
+key = bytes.fromhex("")
+iv = bytes.fromhex("")
+client = MongoClient('')
 db = client['mzunipay']
 payments_collection = db['payments']
 
